@@ -2,20 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 337 40% 96%;
+    --foreground: 338 31% 5%;
+    --card: 337 40% 96%;
+    --card-foreground: 338 31% 5%;
+    --popover: 337 40% 96%;
+    --popover-foreground: 337 40% 96%;
+    --primary: 338 100% 84%;
+    --primary-foreground: var(--background);
+    --secondary: 338 59% 70%;
+    --secondary-foreground: 338 31% 5%;
+    --muted: 338 39% 20%;
+    --muted-foreground: 338 31% 70%;
+    --accent: 338 70% 62%;
+    --accent-foreground: 338 31% 5%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 338 31% 5%;
+    --border: 330 40% 90%;
+    --input: 338 39% 20%;
+    --ring: 338 70% 40%;
+    --radius: 1rem;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  .dark {
+    --background: 338 40% 4%;
+    --foreground: 338 31% 95%;
+    --card: 338 40% 4%;
+    --card-foreground: 338 31% 95%;
+    --popover: 338 40% 4%;
+    --popover-foreground: 338 31% 95%;
+    --primary: 338 100% 16%;
+    --primary-foreground: 338 31% 95%;
+    --secondary: 338 59% 30%;
+    --secondary-foreground: 338 31% 95%;
+    --muted: 338 39% 80%;
+    --muted-foreground: 338 31% 95%;
+    --accent: 338 70% 38%;
+    --accent-foreground: 338 31% 95%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 340 29% 10%;
+    --border: 338 40% 60%;
+    --input: 338 39% 80%;
+    --ring: 338 70% 60%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-synthesis: none;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans bg-background text-foreground;
+  }
+  a {
+    @apply font-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
 }
